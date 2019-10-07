@@ -1,8 +1,10 @@
 version: 2
-machine:
-  node:
-    version: 0.10
-
-test:
-  override:
-    - ./node_modules/.bin/mocha
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6.3.0
+    steps:
+      - checkout
+      - run:
+        name: test
+        command: './node_modules/.bin/mocha'

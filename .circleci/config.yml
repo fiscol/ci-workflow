@@ -16,4 +16,5 @@ jobs:
     
     steps:
       - checkout
-      - run: ./node_modules/.bin/mocha
+      - run: npm install
+      - run: npm test

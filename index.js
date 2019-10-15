@@ -2,7 +2,7 @@ const express = require("express");
 let app = express();
 
 app.get('/', (req, res) =>{
-    res.send("Welcome board.");
+    res.send("Welcome board to the APP.");
 });
 
 const server = app.listen(3000, ()=>{
